@@ -1,0 +1,10 @@
+{
+  "variables" : {
+    "draft"   : "yes",
+    "title"   : "EDK II Template Specification",
+    "version" : "Revision 0.20"
+  },
+
+  "plugins": ["puml"],
+  "pluginsConfig": {}
+}
