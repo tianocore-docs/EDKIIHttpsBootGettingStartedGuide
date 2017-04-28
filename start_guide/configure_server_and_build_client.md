@@ -113,7 +113,7 @@ Add the following libraries to the `LibraryClasses` section:
 
 
 
-```
+```ini
 DpcLib|MdeModulePkg/Library/DxeDpcLib/DxeDpcLib.inf
 NetLib|MdeModulePkg/Library/DxeNetLib/DxeNetLib.inf
 IpIoLib|MdeModulePkg/Library/DxeIpIoLib/DxeIpIoLib.inf
@@ -131,7 +131,7 @@ Add the following drivers to the `Components` section:
 
 
 
-```
+```ini
 MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
 MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf
 MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
@@ -158,7 +158,7 @@ The following drivers should be added to the ` FV ` section for HTTPSv4 boot:
 
 
 
-```
+```ini
 INF MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
 INF MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf
 INF MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
@@ -206,7 +206,7 @@ The steps to configure DHCPv6 on an Ubuntu 15.10 server are shown as follows:
 1.  Install the DHCP server: sudo apt-get install isc-dhcp-server
 2.  Edit /etc/dhcp/dhcpd6.conf as shown below <BR>
 **Note: **If there is no dhcpd6.conf file in /etc/dhcp/, create it first.
-```
+```ini
 default-lease-time 600;` 
 max-lease-time 7200;
 log-facility local7;
@@ -215,11 +215,11 @@ option dhcp6.vendor-class code 16 = { integer 32, integer 16, tring};
 option dhcp6.bootfile-url code 59 = string;
 subnet6 2000:bbbb::/64 {
    #Range for clients
-   range6 2000:bbbb::100 2000:bbbb::ffff;
-   option dhcp6.domain-search “cloudboot.com”;
-   option dhcp6.name-servers 2000:bbbb::10;
-   option dhcp6.vendor-class 0 0 “HTTPClient”;
-   “https://www.cloudboot.com:443/EFI/Shell.efi”;
+      range6 2000:bbbb::100 2000:bbbb::ffff;
+      option dhcp6.domain-search “cloudboot.com”;
+      option dhcp6.name-servers 2000:bbbb::10;
+      option dhcp6.vendor-class 0 0 “HTTPClient”;
+      “https://www.cloudboot.com:443/EFI/Shell.efi”;
 }
 ```
 3.  Configure the server to listen for DHCP requests on the correct network interface. This example assumes eth0 is the primary interface. Edit the /etc/default/isc-dhcp-server file to configure INTERFACE = “eth0”;
