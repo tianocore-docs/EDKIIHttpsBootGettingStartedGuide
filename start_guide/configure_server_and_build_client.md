@@ -197,21 +197,17 @@ For IPv6, the DHCP, DNS and HTTPS server are deployed on different systems. This
 #### Network Topology for IPv6 {#network-topology-for-ipv6}
 
 In this example, the DHCP server is deployed on Ubuntu 15.10\. The DNS server is deployed on Windows Server 2012 R2, and the HTTPS Server is deployed on another instance of Windows Server 2012 R2\. IIS is used to configure HTTPS server. The servers and NT32 simulator are located on the same IPv6 subnet `(2000:bbbb::/64)` as shown in Figure 12.
-
-Figure : HTTPS boot, IPv6 Configuration
+![](/media/image12.jpg)
+Figure 12: HTTPS boot, IPv6 Configuration
 
 #### Configure the DHCPv6 Server {#configure-the-dhcpv6-server}
 
 The steps to configure DHCPv6 on an Ubuntu 15.10 server are shown as follows:
 
 1.  Install the DHCP server: sudo apt-get install isc-dhcp-server
-2.  Edit /etc/dhcp/dhcpd6.conf as shown below
-
-If there is no dhcpd6.conf file in /etc/dhcp/, create it first.
-
-| default-lease-time 600; |
-| --- |
-
+2.  Edit /etc/dhcp/dhcpd6.conf as shown below<br>
+**Note:** If there is no dhcpd6.conf file in /etc/dhcp/, create it first.
+default-lease-time 600; 
 max-lease-time 7200;
 log-facility local7;
 #option definitions common to all supported networks…
