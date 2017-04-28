@@ -99,6 +99,6 @@ Copyright (c) 2017, Intel Corporation. All rights reserved.
 |  1.0  |       Remove the consumed OpensslTlsLib module since the ssl building has been enabled in OpensslLib directly.                                 | Dec 2016  |
 |  1.1  |       Minor formatting changes. Fixed hyperlinks to tianocore.org site and whitepapers.                                                        | Feb 2017  |
 |  1.2  |       Add the IANA approved media type link. Specify the EDKII network stack version.            | Feb 2017  |
-|  1.3  |       Replace examples of md5 signature algorithm with sha256. Added note on PXE to Overview Section with links to TianoCore wiki.       | Apr 2017  |
+|  1.3  |       Replace examples of md5 signature algorithm with sha256. Added note on PXE to Overview Section with links to TianoCore wiki.   <Br>Conversion to gitBook    | Apr 2017  |
 
 
