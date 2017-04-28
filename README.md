@@ -82,6 +82,8 @@ Copyright (c) 2017, Intel Corporation. All rights reserved.
 | 0.20       | Second release.    | March 2017  |
 
 
+### Contributed by
+
 
 
 Wu Jiaxin
