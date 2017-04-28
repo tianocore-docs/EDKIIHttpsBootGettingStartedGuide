@@ -240,7 +240,7 @@ The steps to configure DNSv6 for Microsoft Windows Server 2002 R2 are as follows
 
 #### Configure HTTPS Server for IPv6 {#configure-https-server-for-ipv6}
 
-Please refer to Section 3.1.1.4, as this step is not dependent on IPv4 or IPv6.
+Please refer to **Section Configure HTTPS Server for IPv4 **above, as this step is not dependent on IPv4 or IPv6.
 
 #### Enable NT32 Simulator for IPv6 {#enable-nt32-simulator-for-ipv6}
 
@@ -250,88 +250,75 @@ To enable the UEFI Boot feature for HTTPSv6, the EDKII network stack (IPv6) must
 
 The following libraries and drivers are required by HTTPSv6 boot:
 
-Add the following libraries to the LibraryClasses section:
+Add the following libraries to the `LibraryClasses` section:
 
+
+
+```
 DpcLib|MdeModulePkg/Library/DxeDpcLib/DxeDpcLib.inf
-
 NetLib|MdeModulePkg/Library/DxeNetLib/DxeNetLib.inf
-
 IpIoLib|MdeModulePkg/Library/DxeIpIoLib/DxeIpIoLib.inf
-
 UdpIoLib|MdeModulePkg/Library/DxeUdpIoLib/DxeUdpIoLib.inf
-
 TcpIoLib|MdeModulePkg/Library/DxeTcpIoLib/DxeTcpIoLib.inf
-
 HttpLib|MdeModulePkg/Library/DxeHttpLib/DxeHttpLib.inf
-
 OpensslLib|CryptoPkg/Library/OpensslLib/OpensslLib.inf
-
 BaseCryptLib|CryptoPkg/Library/BaseCryptLib/BaseCryptLib.inf
-
 TlsLib|CryptoPkg/Library/TlsLib/TlsLib.inf
+```
 
-Add the following drivers to the Components section:
 
+Add the following drivers to the `Component`s section:
+
+```
 MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
-
 MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf
-
 MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
-
 NetworkPkg/Ip6Dxe/Ip6Dxe.inf
-
 NetworkPkg/TcpDxe/TcpDxe.inf
-
 NetworkPkg/Udp6Dxe/Udp6Dxe.inf
-
 NetworkPkg/Dhcp6Dxe/Dhcp6Dxe.inf
-
 NetworkPkg/HttpDxe/HttpDxe.inf
-
 NetworkPkg/HttpBootDxe/HttpBootDxe.inf
-
 NetworkPkg/HttpUtilitiesDxe/HttpUtilitiesDxe.inf
-
 NetworkPkg/DnsDxe/DnsDxe.inf
-
 NetworkPkg/TlsDxe/TlsDxe.inf
-
 NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf
 
-The network controller’s UNDI driver also needs to be in the list of platform files
+```
+
+
+**Note:** The network controller’s UNDI driver also needs to be in the list of platform files
 
 **Modules in FDF file**
 
-The following drivers are required in the FV section for HTTPSv6 boot:
+The following drivers are required in the `FV` section for HTTPSv6 boot:
 
+
+```
 INF MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
-
 INF MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf
-
 INF MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
-
 INF NetworkPkg/Ip6Dxe/Ip6Dxe.inf
-
 INF NetworkPkg/TcpDxe/TcpDxe.inf
-
 INF NetworkPkg/Udp6Dxe/Udp6Dxe.inf
-
 INF NetworkPkg/Dhcp6Dxe/Dhcp6Dxe.inf
-
 INF NetworkPkg/HttpDxe/HttpDxe.inf
-
 INF NetworkPkg/HttpBootDxe/HttpBootDxe.inf
-
 INF NetworkPkg/HttpUtilitiesDxe/HttpUtilitiesDxe.inf
-
 INF NetworkPkg/DnsDxe/DnsDxe.inf
-
 INF NetworkPkg/TlsDxe/TlsDxe.inf
-
 INF NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf
+
+```
+
 
 **Build the NT32 Simulator**
 
-The following command is used to build NT32 using Microsoft Visual Studio 2013:
+The following command is used to build NT32 using Microsoft Visual Studio* 2013:
 
+
+
+```
 build -a IA32 –t VS2013x86 -p Nt32pkg\Nt32Pkg.dsc
+```
+
