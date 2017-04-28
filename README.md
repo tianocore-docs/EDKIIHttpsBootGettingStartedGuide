@@ -31,9 +31,7 @@
 
 <img src="media/TianocoreTitlePageLogo.jpg" width="300" />
 
-### {{ book.title }}
-# Getting Started with UEFI HTTPS Boot on EDK II {#getting-started-with-uefi-https-boot-on-edk-ii}
-
+# {{ book.title }}
 
 
 
@@ -43,7 +41,8 @@
 ** {{ book.udkrelease }} **
 {% endif %}
 
-####Revision 1.3
+** {{ book.version }} **
+
 #####WHITEPAPER
 
 
