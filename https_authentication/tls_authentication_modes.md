@@ -40,7 +40,7 @@ TLS supports three authentication modes:
 
 Table 1 shows the certificate requirement in each authentication mode for the HTTPS client and HTTPS server.
 
-| Part - Mode | Authentication of both parties | Server authentication with an unauthenticated client | Total anonymity |
+| Part &#8594;<Br>---<br> Mode&#8595; | Authentication of both parties | Server authentication with an unauthenticated client | Total anonymity |
 | --- | --- | --- | --- |
 | HTTPS Client | rootcert, clientcert, clientkey | Rootcert | NULL |
 | HTTPS Server | rootcert, servercert, serverkey | servercert, serverkey | servercert, serverkey |
