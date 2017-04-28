@@ -40,27 +40,57 @@ Download and install an [OpenSSL binary distribution](https://www.openssl.org/co
 **Linux (Ubuntu as example):** <br> `sudo apt-get install openssl`<br>
 
 2.  Create a self-signed CA Certificate: 
+
+
+```
 openssl req -new -sha256 -keyout rootkey.pem -out rootreq.pem -days 3650
+
 openssl x509 -req -in rootreq.pem -sha256 -signkey rootkey.pem -out rootcert.pem -days 3650
+
 cat rootcert.pem rootkey.pem &gt; root.pem
-(*Use type command instead of cat in Windows)
+```
+
+
+ **Note:** (Use type command instead of cat in Windows)<BR>
 3.  Create a server certificate signed by the CA certificate:
+
+
+```
 openssl req -new -sha256 -keyout serverkey.pem -out serverreq.pem -days 3650
+
 openssl x509 -req -in serverreq.pem -sha256 -CA root.pem -CAkey root.pem -CAcreateserial -out servercert.pem -days 3650
+
 cat servercert.pem serverkey.pem root.pem &gt; server.pem
-(*Use `type` command instead of `cat` in Windows)
+
+```
+**Note: **(Use `type` command instead of `cat` in Windows)<BR>
+
+
+```
 openssl pkcs12 -export -in server.pem -out server.pfx
-**Note: **The .pem file is encoded as BASE64, but only PKCS12 format key can be used when booting to a Microsoft Windows server. This requires the last step in process above, converting server.pem to server.pfx.
+```
+
+
+**Note: **The .pem file is encoded as BASE64, but only PKCS12 format key can be used when booting to a Microsoft Windows server. This requires the last step in process above, converting `server.pem` to `server.pfx`.<BR>
 4.  Create a client certificate signed by the CA certificate:
+
+
+```
 openssl req -new -sha256 -keyout clientkey.pem -out clientreq.pem -days 3650
+
 openssl x509 -req -in clientreq.pem -sha256 -CA root.pem -CAkey root.pem -CAcreateserial -out clientcert.pem -days 3650
+
 cat clientcert.pem clientkey.pem root.pem &gt; client.pem
-(*Use `type` command instead of` cat `in Windows)
+```
+
+
+**Note: **(Use `type` command instead of` cat `in Windows)
 Using the steps above, the required key pairs are generated as shown in Table 2:
-| CA | `rootkey.pem, rootcert.pem, root.pem` |
-| --- | --- |
-| Server | `serverkey.pem, servercert.pem, server.pem, server.pfx `|
-| Client | `clientkey.pem, clientcert.pem, client.pem` |
+|Key | file| 
+|---|---|
+| **CA** | `rootkey.pem, rootcert.pem, root.pem` |
+| **Server** | `serverkey.pem, servercert.pem, server.pem, server.pfx `|
+| **Client** | `clientkey.pem, clientcert.pem, client.pem` |
 
 ######Table 2: Key Pair
 
