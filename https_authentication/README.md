@@ -39,4 +39,6 @@ Figure 1 shows the regular HTTPS authentication mechanism for both the server pr
 4.  Both Server and Client present their own certificate to each other for mutual authentication.
 5.  When the Server receives the Client certificate (clientcert) the certificate will be verified by rootcert, since it has been signed with the rootkey (and vice versa).
 
-Figure : Authentication Mechanism
+![](media/image1.jpg)
+
+###### Figure 1 : Authentication Mechanism
