@@ -231,18 +231,12 @@ The steps to configure DNSv6 for Microsoft Windows Server 2002 R2 are as follows
 
 1.  Add the DNS service in Windows Server Manager – ‘Add roles and features’.
 2.  Add a new forward lookup zone ‘cloudboot.com’ (see Figure 13).
-
-![Capture](../assets/capture.jpeg)
-
-Figure : Configure Forward Lookup Zone for IPv6
-
-1.  Add a new Host “www” for IPv6 (2000:bbbb::8) as shown in Figure 14.
-
-![Capture](../assets/capture.jpeg)
-
-Figure : Configure New Host for IPv6
-
-1.  Right click the DNS server name and select the ‘All Tasks – Restart’ option to restart the DNSv6 service.
+![](/media/image13.jpeg)
+######Figure 13: Configure Forward Lookup Zone for IPv6
+3.  Add a new Host “www” for IPv6 (2000:bbbb::8) as shown in Figure 14.
+![](/media/image14.jpeg)
+######Figure 14: Configure New Host for IPv6
+4.  Right click the DNS server name and select the ‘All Tasks – Restart’ option to restart the DNSv6 service.
 
 #### Configure HTTPS Server for IPv6 {#configure-https-server-for-ipv6}
 
