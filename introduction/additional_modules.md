@@ -35,12 +35,8 @@ All modules introduced in the EDK II HTTP Boot Getting Started Guide are necessa
 
 The following new TLS modules are also required by HTTPS boot:
 
-OpenSSL Crypto and TLS moduleCryptoPkg/Library/OpensslLib/OpensslLib.inf
-
-Base Crypto LibraryCryptoPkg/Library/BaseCryptLib/BaseCryptLib.inf
-
-TLS LibraryCryptoPkg/Library/TlsLib/TlsLib.inf
-
-TLS DriverNetworkPkg/TlsDxe/TlsDxe.inf
-
-TLS Authentication Config DriverNetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf
+* OpenSSL Crypto and TLS module `CryptoPkg/Library/OpensslLib/OpensslLib.inf`
+* Base Crypto Library `CryptoPkg/Library/BaseCryptLib/BaseCryptLib.inf`
+* TLS Library `CryptoPkg/Library/TlsLib/TlsLib.inf`
+* TLS Driver `NetworkPkg/TlsDxe/TlsDxe.inf`
+* TLS Authentication Config Driver `NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf`
