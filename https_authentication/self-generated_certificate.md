@@ -49,11 +49,9 @@ openssl x509 -req -in rootreq.pem -sha256 -signkey rootkey.pem -out rootcert.pem
 
 cat rootcert.pem rootkey.pem > root.pem
 ```
-
-
- **Note:** (Use `type` command instead of `cat` in Windows)<BR>
+<BR>
+**Note:** (Use `type` command instead of `cat` in Windows)<BR>
 3.  Create a server certificate signed by the CA certificate:
-
 
 ```
 openssl req -new -sha256 -keyout serverkey.pem -out serverreq.pem -days 3650
@@ -63,17 +61,14 @@ openssl x509 -req -in serverreq.pem -sha256 -CA root.pem -CAkey root.pem -CAcrea
 cat servercert.pem serverkey.pem root.pem > server.pem
 
 ```
+<BR>
 **Note: **(Use `type` command instead of `cat` in Windows)<BR>
-
-
 ```
 openssl pkcs12 -export -in server.pem -out server.pfx
 ```
-
-
+<BR>
 **Note: **The .pem file is encoded as BASE64, but only PKCS12 format key can be used when booting to a Microsoft Windows server. This requires the last step in process above, converting `server.pem` to `server.pfx`.<BR><BR>
 4.  Create a client certificate signed by the CA certificate:
-
 
 ```
 openssl req -new -sha256 -keyout clientkey.pem -out clientreq.pem -days 3650
