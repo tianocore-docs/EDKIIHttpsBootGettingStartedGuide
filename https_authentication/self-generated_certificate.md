@@ -35,18 +35,16 @@
 This example shows how vendors can generate custom certificates for HTTPS Boot:
 
 1.  Install OpenSSL. <BR>
-Windows: <BR>
+**Windows: **<BR>
 Download and install an [OpenSSL binary distribution](https://www.openssl.org/community/binaries.html). This document uses [Win32 OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) as an example.<BR>
-Linux (Ubuntu as example):
-sudo apt-get install openssl
-2.  Create a self-signed CA Certificate:
+**Linux (Ubuntu as example):** <br> `sudo apt-get install openssl`
+2.  Create a self-signed CA Certificate: 
 
+```
 openssl req -new -sha256 -keyout rootkey.pem -out rootreq.pem -days 3650
 openssl x509 -req -in rootreq.pem -sha256 -signkey rootkey.pem -out rootcert.pem -days 3650
 cat rootcert.pem rootkey.pem &gt; root.pem
-
- 
-
+```
 (*Use type command instead of cat in Windows)
 3.  Create a server certificate signed by the CA certificate:
 
