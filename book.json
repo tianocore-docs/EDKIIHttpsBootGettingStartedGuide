@@ -1,8 +1,8 @@
 {
   "variables" : {
-    "draft"   : "yes",
-    "title"   : "EDK II Template Specification",
-    "version" : "Revision 0.20"
+    "draft"   : "no",
+    "title"   : "Getting Started with UEFI HTTPS Boot on EDK II",
+    "version" : "Revision 1.30"
   },
 
   "plugins": ["puml"],
