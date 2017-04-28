@@ -32,12 +32,10 @@
 <img src="media/TianocoreTitlePageLogo.jpg" width="300" />
 
 ### {{ book.title }}
+# Getting Started with UEFI HTTPS Boot on EDK II {#getting-started-with-uefi-https-boot-on-edk-ii}
 
-{% if book.draft %}
-** DRAFT FOR REVIEW **
-{% else %}
-** {{ book.version }} **
-{% endif %}
+
+
 
 ** {{ gitbook.time|date('MM/DD/YYYY hh:mm:ss') }} **
 
