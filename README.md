@@ -87,7 +87,18 @@ Copyright (c) 2017, Intel Corporation. All rights reserved.
 
 | Revision   | Revision History   | Date        |
 | ---------- | ------------------ | ----------- |
-| 0.l0       | Initial release.   | March 2017  |
-| 0.20       | Second release.    | March 2017  |
+|  0.1  |       Initial release.                                                                                                                         | March 2016  |
+|  0.2  |       Add UEFI Client Certificate Configuration                                                                                                | May 2016  |
+|  0.3  |       Simplify the topology and configuration.                                                                                                 | May 2016  |
+|  0.4  |       Refine the content                                                                                                                       | May 2016  |
+|  0.5  |       Minor content revisions                                                                                           | May 2016  |
+|  0.6  |       Updated figure references & document formatting. Text cleanup for information related to IPv4 & IPv6 configuration (multiple sections).  | June 2016  |
+|  0.7  |       Modified document title. Added information on openSUSE implementation of HTTP Boot.                                                      | July 2016  |
+|  0.8  |       Refine the contents.                                                                                                                     | Sep 2016  |
+|  0.9  |       Update the certificate generation command for Windows OS                                                                                 | Sep 2016  |
+|  1.0  |       Remove the consumed OpensslTlsLib module since the ssl building has been enabled in OpensslLib directly.                                 | Dec 2016  |
+|  1.1  |       Minor formatting changes. Fixed hyperlinks to tianocore.org site and whitepapers.                                                        | Feb 2017  |
+|  1.2  |       Add the IANA approved media type link. Specify the EDKII network stack version.            | Feb 2017  |
+|  1.3  |       Replace examples of md5 signature algorithm with sha256. Added note on PXE to Overview (Section 1.1) with links to TianoCore wiki.       | Apr 2017  |
 
 
