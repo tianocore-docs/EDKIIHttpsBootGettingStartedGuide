@@ -86,9 +86,11 @@ cat clientcert.pem clientkey.pem root.pem &gt; client.pem
 
 **Note: **(Use `type` command instead of` cat `in Windows)
 Using the steps above, the required key pairs are generated as shown in Table 2:
-|Key | file| 
-|---|---|
+
+
+
 | **CA** | `rootkey.pem, rootcert.pem, root.pem` |
+|---|---|
 | **Server** | `serverkey.pem, servercert.pem, server.pem, server.pfx `|
 | **Client** | `clientkey.pem, clientcert.pem, client.pem` |
 
