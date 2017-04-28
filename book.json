@@ -1,6 +1,6 @@
 {
   "variables" : {
-    "draft" : "no",
+    "draftx" : "no",
     "title"   : "Getting Started with UEFI HTTPS Boot on EDK II",
     "version" : "Revision 1.30"
   },
