@@ -31,12 +31,12 @@
 
 ## Additional Modules {#additional-modules}
 
-All modules introduced in the EDK II HTTP Boot Getting Started Guide are necessary. HttpDxe driver needs to be updated to consume the TlsDxe driver.
+All modules introduced in the EDK II HTTP Boot Getting Started Guide are necessary. `HttpDxe` driver needs to be updated to consume the `TlsDxe` driver.
 
 The following new TLS modules are also required by HTTPS boot:
 
-* OpenSSL Crypto and TLS module `CryptoPkg/Library/OpensslLib/OpensslLib.inf`
-* Base Crypto Library `CryptoPkg/Library/BaseCryptLib/BaseCryptLib.inf`
-* TLS Library `CryptoPkg/Library/TlsLib/TlsLib.inf`
-* TLS Driver `NetworkPkg/TlsDxe/TlsDxe.inf`
-* TLS Authentication Config Driver `NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf`
+* OpenSSL Crypto and TLS module<br> `CryptoPkg/Library/OpensslLib/OpensslLib.inf`
+* Base Crypto Library <BR> `CryptoPkg/Library/BaseCryptLib/BaseCryptLib.inf`
+* TLS Library<BR> `CryptoPkg/Library/TlsLib/TlsLib.inf`
+* TLS Driver<BR> `NetworkPkg/TlsDxe/TlsDxe.inf`
+* TLS Authentication Config Driver<BR> `NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf`
