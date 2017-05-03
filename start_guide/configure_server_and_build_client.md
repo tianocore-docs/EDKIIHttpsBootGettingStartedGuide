@@ -48,7 +48,7 @@ The solution documented in this section uses a single server for the DHCP, DNS a
 
 This example is based on Microsoft Windows Server 2012 R2\. Internet Information Services (IIS) are used to configure HTTPS server. The server and NT32 simulator use the same IPv4 subnet (192.168.10.0) as shown in Figure 2.
 ![](/media/image2.jpg)
-###### Figure 2 HTTPS Boot, IPv4 Configuration {#figure-2---https-boot,-ipv4-configuration}
+###### Figure 2 HTTPS Boot, IPv4 Configuration{#figure-2-https-boot-ipv4-configuration}
 
 #### Configure DHCPv4 Server {#configure-dhcpv4-server}
 
@@ -87,7 +87,7 @@ The steps to configure the HTTPS server are as follows:
 ###### Figure 6 Add MIME Type{#figure-6---add-mime-type}
 ![](/media/image7.jpeg)
 ###### Figure 7 Add a New MIME Type to IIS{#figure-7---add-a-new-mime-type-to-iis}
-3.  Enroll the Server key pair (`server.pfx`) in ‘Server Certificates’. Refer to Figure 8 and Figure 9 for details. Here, we assume the `server.pfx` has been generated. For detailed steps, please refer to section **Self-Generated certificate**.
+3.  Enroll the Server key pair (`server.pfx`) in ‘Server Certificates’. Refer to Figure 8 and Figure 9 for details. Here, we assume the `server.pfx` has been generated. For detailed steps, please refer to section **[Self-Generated certificate](https_authentication/self-generated_certificate.md#self-generated-certificate)**.
 ![](/media/image8.jpeg)
 ###### Figure 8 Add Server Certificates{#figure-8---add-server-certificates}
 ![](/media/image9.jpeg)
@@ -98,7 +98,7 @@ The steps to configure the HTTPS server are as follows:
 ###### Figure 10 Create a New Website for the HTTPS Server{#figure-10---create-a-new-website-for-the-https-server}
 6.  Create an ‘EFI’ folder in default root path, which was configured in Step 5. Copy the UEFI Shell binary that matches your firmware configuration into this folder (`C:\inetpub\httpsroot\EFI`). The UEFI Shell binary is in the `ShellBinPkg` package on EDK II ([https://github.com/tianocore/edk2/tree/master/ShellBinPkg](https://github.com/tianocore/edk2/tree/master/ShellBinPkg)).The file should be renamed `Shell.efi` to match the configuration in DHCP option 67. This sets the UEFI Shell boot path as [https://www.cloudboot.com:443/EFI/Shell.efi](https://www.cloudboot.com:443/EFI/Shell.efi)
 ![](/media/image11.jpeg) 
-###### Figure 11 The UEFI Shell file, as viewed in IIS{#figure-11---the-uefi-shell-file,-as-viewed-in-iis}
+###### Figure 11 The UEFI Shell file, as viewed in IIS{#figure-11---the-uefi-shell-file-as-viewed-in-iis}
 **Note:** _The NT32 Simulator uses the IA32 UEFI Shell binary, while most production systems require the x64 UEFI Shell to match the UEFI firmware configuration. This depends on your platform firmware configuration.
 _
 
@@ -198,7 +198,7 @@ For IPv6, the DHCP, DNS and HTTPS server are deployed on different systems. This
 
 In this example, the DHCP server is deployed on Ubuntu 15.10\. The DNS server is deployed on Windows Server 2012 R2, and the HTTPS Server is deployed on another instance of Windows Server 2012 R2\. IIS is used to configure HTTPS server. The servers and NT32 simulator are located on the same IPv6 subnet `(2000:bbbb::/64)` as shown in Figure 12.
 ![](/media/image12.jpg)
-###### Figure 12 HTTPS boot, IPv6 Configuration{#figure-12---https-boot,-ipv6-configuration}
+###### Figure 12 HTTPS boot, IPv6 Configuration{#figure-12---https-boot-ipv6-configuration}
 
 #### Configure the DHCPv6 Server {#configure-the-dhcpv6-server}
 

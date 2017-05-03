@@ -41,4 +41,4 @@ Figure 1 shows the regular HTTPS authentication mechanism for both the server pr
 
 
 ![](/media/image1.jpg)
-###### Figure 1 Authentication Mechanism
+###### Figure 1 Authentication Mechanism{#figure-1-authentication-mechanism}
