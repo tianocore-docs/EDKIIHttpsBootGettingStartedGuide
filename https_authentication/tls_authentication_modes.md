@@ -45,4 +45,4 @@ Table 1 shows the certificate requirement in each authentication mode for the HT
 | HTTPS Client | rootcert, clientcert, clientkey | Rootcert | NULL |
 | HTTPS Server | rootcert, servercert, serverkey | servercert, serverkey | servercert, serverkey |
 
-######Table 1: Certificate Requirement
+######Table 1 Certificate Requirement

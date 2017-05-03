@@ -15,13 +15,22 @@
 ---
 * Tables
  * [Table 1 - Certificate Requirement](https_authentication/tls_authentication_modes.md#table-1---Certificate Requirement)
- * [Table 2 - Key Pair](https_authentication/tls_authentication_modes.md#table-2---Key Pair)
+ * [Table 2 - Key Pair](https_authentication/tls_authentication_modes.md#table-2---key-pair)
 ---
 
 * Figures
-  * [Figure 1 - Authentication Mechanism](https_authentication/README.md#figure-1--- authentication-mechanism)
- * [Figure 2 - HTTPS Boot, IPv4 Configuration](start_guide/configure_server_and_build_client.md#figure-2---https-boot,-ipv4-configuration)
- * [Figure 3 - DHCPv4 Server Scope](start_guide/configure_server_and_build_client.md#figure-3---dhcpv4-server-scope)
+  * [Figure 1 - Authentication Mechanism](https_authentication/README.md#figure-1---authentication-mechanism)
+  * [Figure 2 - HTTPS Boot, IPv4 Configuration](start_guide/configure_server_and_build_client.md#figure-2-https-boot,-ipv4-configuration)
+ * [Figure 3 - DHCPv4 Server Scope](start_guide/configure_server_and_build_client.md #figure-3---dhcpv4-server-scope)
  * [Figure 4 - DHCPv4 Server Options](start_guide/configure_server_and_build_client.md#figure-4---dhcpv4-server-options)
  * [Figure 5 - Configure New Host for IPv4](start_guide/configure_server_and_build_client.md#figure-5---configure-new-host-for-ipv4)
+ * [Figure 5 - Configure New Host for IPv4](start_guide/configure_server_and_build_client.md#figure-5---configure-new-host-for-ipv4)
+ * [Figure 5 - Configure New Host for IPv4](start_guide/configure_server_and_build_client.md#figure-5---configure-new-host-for-ipv4)
+ * [Figure 5 - Configure New Host for IPv4](start_guide/configure_server_and_build_client.md#figure-5---configure-new-host-for-ipv4)
+ * [Figure 5 - Configure New Host for IPv4](start_guide/configure_server_and_build_client.md#figure-5---configure-new-host-for-ipv4)
+ * [Figure 5 - Configure New Host for IPv4](start_guide/configure_server_and_build_client.md#figure-5---configure-new-host-for-ipv4)
+ * [Figure 5 - Configure New Host for IPv4](start_guide/configure_server_and_build_client.md#figure-5---configure-new-host-for-ipv4)
+ * [Figure 5 - Configure New Host for IPv4](start_guide/configure_server_and_build_client.md#figure-5---configure-new-host-for-ipv4)
+ 
+ 
  
