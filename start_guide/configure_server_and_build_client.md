@@ -241,7 +241,7 @@ The steps to configure DNSv6 for Microsoft Windows Server 2002 R2 are as follows
 
 #### Configure HTTPS Server for IPv6 {#configure-https-server-for-ipv6}
 
-Please refer to **Section Configure HTTPS Server for IPv4 **above, as this step is not dependent on IPv4 or IPv6.
+Please refer to [Section Configure HTTPS Server for IPv4](#configure-https-server-for-ipv4) above, as this step is not dependent on IPv4 or IPv6.
 
 #### Enable NT32 Simulator for IPv6 {#enable-nt32-simulator-for-ipv6}
 
