@@ -23,4 +23,6 @@
 * [Figure 12 - HTTPS boot, IPv6 Configuration](start_guide/configure_server_and_build_client.md#figure-12---https-boot,-ipv6-configuration)
 * [Figure 13 - Configure Forward Lookup Zone for IPv6](start_guide/configure_server_and_build_client.md#figure-13---configure-forward-lookup-zone-for-ipv6)
 * [Figure 14 - Configure New Host for IPv6](start_guide/configure_server_and_build_client.md#figure-14---configure-new-host-for-ipv6)
+* [Figure 15 - Configure New Host for IPv6](start_guide/configure_server_and_build_client.md#figure-14---configure-new-host-for-ipv6)
+
 
