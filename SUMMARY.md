@@ -19,7 +19,8 @@
 ---
 
 * Figures
-  * [ Figure 1 - Authentication Mechanism](https_authentication/README.md#figure-1--- Authentication Mechanism)
- * [ Figure 2 - HTTPS Boot, IPv4 Configuration](start_guide/configure_server_and_build_client.md#figure-2---HTTPS Boot, IPv4 Configuration)
- * [ Figure 3 - DHCPv4 Server Scope](start_guide/configure_server_and_build_client.md#figure-3---DHCPv4 Server Scope)
- * [Figure 4 - DHCPv4 Server Options](start_guide/configure_server_and_build_client.md#figure-4---DHCPv4 Server Options)
+  * [ Figure 1 - Authentication Mechanism](https_authentication/README.md#figure-1--- Authentication-Mechanism)
+ * [ Figure 2 - HTTPS Boot, IPv4 Configuration](start_guide/configure_server_and_build_client.md#figure-2---HTTPS-Boot,-IPv4-Configuration)
+ * [ Figure 3 - DHCPv4 Server Scope](start_guide/configure_server_and_build_client.md#figure-3---DHCPv4-Server-Scope)
+ * [Figure 4 - DHCPv4 Server Options](start_guide/configure_server_and_build_client.md#figure-4---DHCPv4-Server-Options)
+ * [Figure 5 - Tianocore Logo](start_guide/configure_server_and_build_client.md#figure-5---Configure-New-Host-for-IPv4)
