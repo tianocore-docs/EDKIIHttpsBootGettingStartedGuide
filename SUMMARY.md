@@ -32,5 +32,6 @@
  * [Figure 11 - The UEFI Shell file, as viewed in IIS](start_guide/configure_server_and_build_client.md#figure-11---the-uefi-shell-file,-as-viewed-in-iis)
  * [Figure 12 - HTTPS boot, IPv6 Configuration](start_guide/configure_server_and_build_client.md#figure-12---https-boot,-ipv6-configuration)
  
+ * [Figure 1 - Authentication Mechanism](https_authentication/README.md#figure-1---authentication-mechanism)
  
  
