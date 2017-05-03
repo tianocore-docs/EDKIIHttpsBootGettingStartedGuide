@@ -48,7 +48,7 @@ The solution documented in this section uses a single server for the DHCP, DNS a
 
 This example is based on Microsoft Windows Server 2012 R2\. Internet Information Services (IIS) are used to configure HTTPS server. The server and NT32 simulator use the same IPv4 subnet (192.168.10.0) as shown in Figure 2.
 ![](/media/image2.jpg)
-###### Figure 2: HTTPS Boot, IPv4 Configuration
+###### Figure 2 HTTPS Boot, IPv4 Configuration
 
 #### Configure DHCPv4 Server {#configure-dhcpv4-server}
 
@@ -57,13 +57,13 @@ The steps to configure a DHCPv4 server are as follows:
 1. Add a DHCP service in Windows Server. Please refer to the installation steps available here: http://thetechnosolution.com/installing-and-configuring-dhcp-on-windows-server-2012-r2/.
 2.  Right click on ‘IPv4 – New Scope’ to create a new scope option for IPv4 including the scope name, address range, and IP address lease duration. See Figure 3 for details.
 ![](/media/image3.jpeg)
-###### Figure 3: DHCPv4 Server Scope
+###### Figure 3 DHCPv4 Server Scope
 3. Right click ‘Server Options – Configure Options…’ to configure IPv4 options including option 6, 60 and 67\. These options must be configured for proper functionality. After configuration, the options should appear as shown in Figure 4\. If the corresponding option code doesn’t appear in ‘Server Options – Configure Options…’ then right click ‘IPv4 – Set Predefined Options’, and click the ‘Add’ button to add the predefined option.<BR>
 a.  Option 6 indicates the DNS server address.<BR>
 b.  Option 60 defines the vendor Class ID. The value should be set to ‘HTTPClient’.<BR>
 c.  Option 67 contains the corresponding boot file URI.<BR>
  ![](/media/image4.jpeg)
-###### Figure 4: DHCPv4 Server Options
+###### Figure 4 DHCPv4 Server Options
 4. Right click the DHCP server name and select the ‘All Tasks – Restart’ option to restart the DHCPv4 service.
 
 #### Configure DNSv4 Server {#configure-dnsv4-server}
@@ -74,7 +74,7 @@ The steps to configure the DNSv4 server are as follows:
 2.  Add a new forward lookup zone named ‘cloudboot.com’.
 3.  Add a new Host “www” for IPv4 (192.168.10.8). See Figure 5 for reference.
 ![](/media/image5.jpeg)
-###### Figure 5: Configure New Host for IPv4
+###### Figure 5 Configure New Host for IPv4
 4. Right click the DHCP server name and select the ‘All Tasks – Restart’ option to restart the DHCPv4 service.
 
 #### Configure HTTPS Server for IPv4 {#configure-https-server-for-ipv4}
