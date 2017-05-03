@@ -10,6 +10,8 @@
   * [Self-Generated Certificate](https_authentication/self-generated_certificate.md)
 * [Start Guide](start_guide/README.md)
   * [Configure Server and Build Client](start_guide/configure_server_and_build_client.md)
+   * [Solution for IPv4](start_guide/configure_server_and_build_client.md#solution-for-ipv4)
+   * [Solution for IPv6](start_guide/configure_server_and_build_client.md#solution-for-ipv6)
   * [Run HTTPS Boot](start_guide/run_https_boot.md)
 
 ---
