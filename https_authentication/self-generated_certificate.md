@@ -83,6 +83,6 @@ Using the steps above, the required key pairs are generated as shown in Table 2:
 | **Server** | `serverkey.pem, servercert.pem, server.pem, server.pfx `|
 | **Client** | `clientkey.pem, clientcert.pem, client.pem` |
 
-######Table 2 Key Pair
+######Table 2 Key Pair{#table-2---key-pair}
 
 The next section demonstrates how to use ‘`rootcert.pem`’ and ‘`server.pfx`’ to enable server authentication with an unauthenticated client (one-way authentication).

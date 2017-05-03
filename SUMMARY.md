@@ -16,7 +16,7 @@
 
 * Tables
   * [Table 1 - Certificate Requirement](https_authentication/tls_authentication_modes.md#table-1---certificate-requirement)
-  * [Table 2 - Key Pair](https_authentication/tls_authentication_modes.md#table-2---key-pair)
+  * [Table 2 - Key Pair](* [Table 2 - Key Pair](https_authentication/self-generated_certificate.md#table-2---key-pair)#table-2---key-pair)
 
 ---
 
