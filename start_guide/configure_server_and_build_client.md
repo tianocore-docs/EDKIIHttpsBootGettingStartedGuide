@@ -87,7 +87,7 @@ The steps to configure the HTTPS server are as follows:
 ###### Figure 6 Add MIME Type{#figure-6---add-mime-type}
 ![](/media/image7.jpeg)
 ###### Figure 7 Add a New MIME Type to IIS{#figure-7---add-a-new-mime-type-to-iis}
-3.  Enroll the Server key pair (`server.pfx`) in ‘Server Certificates’. Refer to Figure 8 and Figure 9 for details. Here, we assume the `server.pfx` has been generated. For detailed steps, please refer to section [Self-Generated Certificate](https_authentication/self-generated_certificate.md)
+3.  Enroll the Server key pair (`server.pfx`) in ‘Server Certificates’. Refer to Figure 8 and Figure 9 for details. Here, we assume the `server.pfx` has been generated. For detailed steps, please refer to section [Self-Generated Certificate](../https_authentication/self-generated_certificate.md)
 ![](/media/image8.jpeg)
 ###### Figure 8 Add Server Certificates{#figure-8---add-server-certificates}
 ![](/media/image9.jpeg)
