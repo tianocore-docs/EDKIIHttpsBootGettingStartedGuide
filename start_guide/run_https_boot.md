@@ -38,14 +38,14 @@ Currently the UEFI HTTPS Boot feature only supports server authentication with a
 
 The server CA certificate must first be configured to enable UEFI HTTPS Boot. The `TlsAuthConfigDxe` driver provides a user interface to support the required certificate configuration. Figure 15 shows the UEFI Client configuration in Boot Manager.
 ![](/media/image15.png)
-######Figure 15: UEFI Client Certificate Configuration
+######Figure 15: UEFI Client Certificate Configuration{#figure-15---uefi-client-certificate-configuration}
 
 ### Run HTTPS Boot on the UEFI Client {#run-https-boot-on-the-uefi-client}
 
 After the Server CA certificate (`rootcert.pem`) has been configured, the NT32 simulator can perform a HTTPS Boot. Start the NT32 simulator, enter Boot Manager, and select “UEFI HTTPv4” or “UEFI HTTPv6” depending on the server configuration (see Figure 16).
 ![](/media/image16.jpeg)
-######Figure 16: Select Boot Option
+######Figure 16: Select Boot Option{#figure-16---select-boot-option}
 
 During UEFI HTTPS Boot, the `HttpDxe` driver consumes the `TlsDxe` driver. This boot process supports HTTP and HTTPS, depending on the URL. This allows `HttpDxe` to communicate with an HTTPS or HTTP server configuration. The example in this document loads a UEFI Shell image downloaded from the server. Figure 17 shows the result of a successful UEFI HTTPS Boot.
 ![](/media/image17.jpeg)
-######Figure 17: Boot the Downloaded UEFI Shell Image
+######Figure 17: Boot the Downloaded UEFI Shell Image{#figure-17---boot-the-downloaded-uefi-shell-image}
