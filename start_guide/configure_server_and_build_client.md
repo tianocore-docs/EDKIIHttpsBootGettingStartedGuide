@@ -57,7 +57,7 @@ The steps to configure a DHCPv4 server are as follows:
 1. Add a DHCP service in Windows Server. Please refer to the installation steps available here: http://thetechnosolution.com/installing-and-configuring-dhcp-on-windows-server-2012-r2/.
 2.  Right click on ‘IPv4 – New Scope’ to create a new scope option for IPv4 including the scope name, address range, and IP address lease duration. See Figure 3 for details.
 ![](/media/image3.jpeg)
-###### Figure 3: DHCPv4 Server Scope
+######Figure 3: DHCPv4 Server Scope
 3. Right click ‘Server Options – Configure Options…’ to configure IPv4 options including option 6, 60 and 67\. These options must be configured for proper functionality. After configuration, the options should appear as shown in Figure 4\. If the corresponding option code doesn’t appear in ‘Server Options – Configure Options…’ then right click ‘IPv4 – Set Predefined Options’, and click the ‘Add’ button to add the predefined option.<BR>
 a.  Option 6 indicates the DNS server address.<BR>
 b.  Option 60 defines the vendor Class ID. The value should be set to ‘HTTPClient’.<BR>
