@@ -48,7 +48,7 @@ The solution documented in this section uses a single server for the DHCP, DNS a
 
 This example is based on Microsoft Windows Server 2012 R2\. Internet Information Services (IIS) are used to configure HTTPS server. The server and NT32 simulator use the same IPv4 subnet (192.168.10.0) as shown in Figure 2.
 ![](/media/image2.jpg)
-###### Figure 2 HTTPS Boot, IPv4 Configuration
+###### Figure 2 HTTPS Boot, IPv4 Configuration {#figure-2---https-boot,-ipv4-configuration}
 
 #### Configure DHCPv4 Server {#configure-dhcpv4-server}
 
@@ -63,7 +63,7 @@ a.  Option 6 indicates the DNS server address.<BR>
 b.  Option 60 defines the vendor Class ID. The value should be set to ‘HTTPClient’.<BR>
 c.  Option 67 contains the corresponding boot file URI.<BR>
  ![](/media/image4.jpeg)
-###### Figure 4 DHCPv4 Server Options
+###### Figure 4 DHCPv4 Server Options{#figure-3---dhcpv4-server-scope}
 4. Right click the DHCP server name and select the ‘All Tasks – Restart’ option to restart the DHCPv4 service.
 
 #### Configure DNSv4 Server {#configure-dnsv4-server}
