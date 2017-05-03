@@ -21,3 +21,6 @@
 * [Figure 10 - Create a New Website for the HTTPS Server](start_guide/configure_server_and_build_client.md#figure-10---create-a-new-website-for-the-https-server)
 * [Figure 11 - The UEFI Shell file, as viewed in IIS](start_guide/configure_server_and_build_client.md#figure-11---the-uefi-shell-file,-as-viewed-in-iis)
 * [Figure 12 - HTTPS boot, IPv6 Configuration](start_guide/configure_server_and_build_client.md#figure-12---https-boot,-ipv6-configuration)
+* [Figure 13 - Configure Forward Lookup Zone for IPv6](start_guide/configure_server_and_build_client.md#figure-13---configure-forward-lookup-zone-for-ipv6)
+* [Figure 14 - Configure New Host for IPv6](start_guide/configure_server_and_build_client.md#figure-14---configure-new-host-for-ipv6)
+
