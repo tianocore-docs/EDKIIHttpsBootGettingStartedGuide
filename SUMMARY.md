@@ -21,3 +21,4 @@
 * Figures
   * [ Figure 1 - Authentication Mechanism](https_authentication/README.md#figure-1 --- Authentication Mechanism)
  * [ Figure 2 - HTTPS Boot, IPv4 Configuration](start_guide/configure_server_and_build_client.md#figure-2 --- HTTPS Boot, IPv4 Configuration)
+ * [ Figure 3 - DHCPv4 Server Scope](start_guide/configure_server_and_build_client.md#figure-3 --- DHCPv4 Server Scope)
