@@ -84,21 +84,21 @@ The steps to configure the HTTPS server are as follows:
 1.  Enable the Internet Information Services (IIS) feature in Windows Server manager, based on installation steps available here: [http://www.iis.net/learn/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2](http://www.iis.net/learn/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
 2.  Open the Internet Information Services (IIS) Manager, and add a new MIME type for the resources required by the HTTPS server. For the approved media type by IANA (e.g. *.efi/*.img/*.iso), please refer to the [http://www.iana.org/assignments/media-types](http://www.iana.org/assignments/media-types). In this example, the client will boot to a UEFI Shell image provided by the server. This requires addition of the `.efi` file type. Figure 6 and Figure 7 show the detailed steps.
 ![](/media/image6.jpeg)
-###### Figure 6: Add MIME Type
+###### Figure 6 Add MIME Type
 ![](/media/image7.jpeg)
-###### Figure 7: Add a New MIME Type to IIS
+###### Figure 7 Add a New MIME Type to IIS
 3.  Enroll the Server key pair (`server.pfx`) in ‘Server Certificates’. Refer to Figure 8 and Figure 9 for details. Here, we assume the `server.pfx` has been generated. For detailed steps, please refer to section **Self-Generated certificate**.
 ![](/media/image8.jpeg)
-###### Figure 8: Add Server Certificates
+###### Figure 8 Add Server Certificates
 ![](/media/image9.jpeg)
-###### Figure 9: Enroll a Certificate for the HTTPS Server
+###### Figure 9 Enroll a Certificate for the HTTPS Server
 4.  Create a `‘httpsroot`’ folder in ‘`C:\inetpub`’ as a default root path (`C:\inetpub\httpsroot`).
 5.  Right-click on ‘Sites – Add Website’ to create a new website for the HTTPS server. The areas highlighted in Figure 10 are required fields. The ‘Physical path’ is the default root path for the website. The ‘SSL certificate’ is the server key’s (`server.pfx`) common name (`192.168.10.8`), which was enrolled in Step 3\. The binding type is ‘https’ and the binding port value is ‘`443`’.
 ![](/media/image10.jpeg)
-###### Figure 10: Create a New Website for the HTTPS Server
+###### Figure 10 Create a New Website for the HTTPS Server
 6.  Create an ‘EFI’ folder in default root path, which was configured in Step 5. Copy the UEFI Shell binary that matches your firmware configuration into this folder (`C:\inetpub\httpsroot\EFI`). The UEFI Shell binary is in the `ShellBinPkg` package on EDK II ([https://github.com/tianocore/edk2/tree/master/ShellBinPkg](https://github.com/tianocore/edk2/tree/master/ShellBinPkg)).The file should be renamed `Shell.efi` to match the configuration in DHCP option 67. This sets the UEFI Shell boot path as [https://www.cloudboot.com:443/EFI/Shell.efi](https://www.cloudboot.com:443/EFI/Shell.efi)
 ![](/media/image11.jpeg) 
-###### Figure 11: The UEFI Shell file, as viewed in IIS
+###### Figure 11 The UEFI Shell file, as viewed in IIS
 **Note:** _The NT32 Simulator uses the IA32 UEFI Shell binary, while most production systems require the x64 UEFI Shell to match the UEFI firmware configuration. This depends on your platform firmware configuration.
 _
 
@@ -198,7 +198,7 @@ For IPv6, the DHCP, DNS and HTTPS server are deployed on different systems. This
 
 In this example, the DHCP server is deployed on Ubuntu 15.10\. The DNS server is deployed on Windows Server 2012 R2, and the HTTPS Server is deployed on another instance of Windows Server 2012 R2\. IIS is used to configure HTTPS server. The servers and NT32 simulator are located on the same IPv6 subnet `(2000:bbbb::/64)` as shown in Figure 12.
 ![](/media/image12.jpg)
-###### Figure 12: HTTPS boot, IPv6 Configuration
+###### Figure 12 HTTPS boot, IPv6 Configuration
 
 #### Configure the DHCPv6 Server {#configure-the-dhcpv6-server}
 
@@ -233,10 +233,10 @@ The steps to configure DNSv6 for Microsoft Windows Server 2002 R2 are as follows
 1.  Add the DNS service in Windows Server Manager – ‘Add roles and features’.
 2.  Add a new forward lookup zone ‘`cloudboot.com`’ (see Figure 13).
 ![](/media/image13.jpeg)
-###### Figure 13: Configure Forward Lookup Zone for IPv6
+###### Figure 13 Configure Forward Lookup Zone for IPv6
 3.  Add a new Host “www” for IPv6 (`2000:bbbb::8`) as shown in Figure 14.
 ![](/media/image14.jpeg)
-###### Figure 14: Configure New Host for IPv6
+###### Figure 14 Configure New Host for IPv6
 4.  Right click the DNS server name and select the ‘All Tasks – Restart’ option to restart the DNSv6 service.
 
 #### Configure HTTPS Server for IPv6 {#configure-https-server-for-ipv6}
