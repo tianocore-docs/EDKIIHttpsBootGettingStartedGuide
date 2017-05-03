@@ -74,7 +74,7 @@ The steps to configure the DNSv4 server are as follows:
 2.  Add a new forward lookup zone named ‘cloudboot.com’.
 3.  Add a new Host “www” for IPv4 (192.168.10.8). See Figure 5 for reference.
 ![](/media/image5.jpeg)
-###### Figure 5 Configure New Host for IPv4{#Figure 5 Configure New Host for IPv4}
+###### Figure 5 Configure New Host for IPv4{#figure-5---configure-new-host-for-ipv4}
 4. Right click the DHCP server name and select the ‘All Tasks – Restart’ option to restart the DHCPv4 service.
 
 #### Configure HTTPS Server for IPv4 {#configure-https-server-for-ipv4}
