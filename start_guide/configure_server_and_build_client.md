@@ -40,7 +40,7 @@ A UEFI HTTPS boot server has three main roles:
 
 Depending on server requirements, two test-bed solutions are presented for reference: one simple approach for IPv4, and an advanced solution using IPv6\. Users can select the proper scenario based on individual requirements. Self-generated certificates from Table 2 (‘`rootcert.pem`’ and ‘`server.pfx`’) are used for HTTPS one-way authentication.
 
-### Solution for IPv4 {#solution-for-ipv4}
+## Solution for IPv4 {#solution-for-ipv4}
 
 The solution documented in this section uses a single server for the DHCP, DNS and HTTPS functions. This is considered the simplest server configuration for UEFI HTTPS Boot.
 
@@ -190,7 +190,7 @@ build -a IA32 –t VS2013x86 -p Nt32pkg\Nt32Pkg.dsc
 
 
 
-### Solution for IPv6 {#solution-for-ipv6}
+## Solution for IPv6 {#solution-for-ipv6}
 
 For IPv6, the DHCP, DNS and HTTPS server are deployed on different systems. This solution provides a more flexible configuration for the DHCP server, DNS server and HTTPS Server.
 
