@@ -1,0 +1,952 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configure Server and Build Client · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="configure_server_and_build_client.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started with UEFI HTTPS Boot on EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/">
+            
+                <a href="../introduction/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../introduction/">
+            
+                <a href="../introduction/#overview">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../introduction/additional_protocols.html">
+            
+                <a href="../introduction/additional_protocols.html">
+            
+                    
+                    Additional Protocols
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../introduction/additional_modules.html">
+            
+                <a href="../introduction/additional_modules.html">
+            
+                    
+                    Additional Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../https_authentication/">
+            
+                <a href="../https_authentication/">
+            
+                    
+                    HTTPS Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../https_authentication/tls_authentication_modes.html">
+            
+                <a href="../https_authentication/tls_authentication_modes.html">
+            
+                    
+                    TLS Authentication Modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../https_authentication/self-generated_certificate.html">
+            
+                <a href="../https_authentication/self-generated_certificate.html">
+            
+                    
+                    Self-Generated Certificate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Start Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html">
+            
+                    
+                    Configure Server and Build Client
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#solution-for-ipv4">
+            
+                    
+                    Solution for IPv4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#solution-for-ipv6">
+            
+                    
+                    Solution for IPv6
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="run_https_boot.html">
+            
+                <a href="run_https_boot.html">
+            
+                    
+                    Run HTTPS Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../https_authentication/tls_authentication_modes.html">
+            
+                <a href="../https_authentication/tls_authentication_modes.html#table-1---certificate-requirement">
+            
+                    
+                    Table 1 - Certificate Requirement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../https_authentication/self-generated_certificate.html">
+            
+                <a href="../https_authentication/self-generated_certificate.html#table-2---key-pair">
+            
+                    
+                    Table 2 - Key Pair
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Figures
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../https_authentication/">
+            
+                <a href="../https_authentication/#figure-1-authentication-mechanism">
+            
+                    
+                    Figure 1 - Authentication Mechanism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-2-https-boot,-ipv4-configuration">
+            
+                    
+                    Figure 2 - HTTPS Boot, IPv4 Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-3---dhcpv4-server-scope">
+            
+                    
+                    Figure 3 - DHCPv4 Server Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-4---dhcpv4-server-options">
+            
+                    
+                    Figure 4 - DHCPv4 Server Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-5---configure-new-host-for-ipv4">
+            
+                    
+                    Figure 5 - Configure New Host for IPv4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-6---add-mime-type">
+            
+                    
+                    Figure 6 - Add MIME Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-7---add-a-new-mime-type-to-iis">
+            
+                    
+                    Figure 7 - Add MIME Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-8---add-server-certificates">
+            
+                    
+                    Figure 8 - Add Server Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-9---enroll-a-certificate-for-the-https-server">
+            
+                    
+                    Figure 9 - Enroll a Certificate for the HTTPS Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-10---create-a-new-website-for-the-https-server">
+            
+                    
+                    Figure 10 - Create a New Website for the HTTPS Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-11---the-uefi-shell-file-as-viewed-in-iis">
+            
+                    
+                    Figure 11 - The UEFI Shell file, as viewed in IIS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-12---https-boot-ipv6-configuration">
+            
+                    
+                    Figure 12 - HTTPS boot, IPv6 Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-13---configure-forward-lookup-zone-for-ipv6">
+            
+                    
+                    Figure 13 - Configure Forward Lookup Zone for IPv6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.14" data-path="configure_server_and_build_client.html">
+            
+                <a href="configure_server_and_build_client.html#figure-14---configure-new-host-for-ipv6">
+            
+                    
+                    Figure 14 - Configure New Host for IPv6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.15" data-path="run_https_boot.html">
+            
+                <a href="run_https_boot.html#figure-15---uefi-client-certificate-configuration">
+            
+                    
+                    Figure 15 - UEFI Client Certificate Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.16" data-path="run_https_boot.html">
+            
+                <a href="run_https_boot.html#figure-16---select-boot-option">
+            
+                    
+                    Figure 16 - Select Boot Option
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.17" data-path="run_https_boot.html">
+            
+                <a href="run_https_boot.html#figure-17---boot-the-downloaded-uefi-shell-image">
+            
+                    
+                    Figure 17 - Boot the Downloaded UEFI Shell Image
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Configure Server and Build Client</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Getting Started with UEFI HTTPS Boot on EDK II</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 07:08:27]</div>
+        <div style="text-align:right">Revision 1.30</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  First Chapter of EDK II Template Specification
+
+  Copyright (c) 2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="configure-server-and-build-client">Configure Server and Build Client </h2>
+<p>A UEFI HTTPS boot server has three main roles:</p>
+<ol>
+<li>DHCP server</li>
+<li>DNS server</li>
+<li>HTTPS server</li>
+</ol>
+<p>Depending on server requirements, two test-bed solutions are presented for reference: one simple approach for IPv4, and an advanced solution using IPv6. Users can select the proper scenario based on individual requirements. Self-generated certificates from Table 2 (&#x2018;<code>rootcert.pem</code>&#x2019; and &#x2018;<code>server.pfx</code>&#x2019;) are used for HTTPS one-way authentication.</p>
+<h2 id="solution-for-ipv4">Solution for IPv4 </h2>
+<p>The solution documented in this section uses a single server for the DHCP, DNS and HTTPS functions. This is considered the simplest server configuration for UEFI HTTPS Boot.</p>
+<h4 id="network-topology-for-ipv4">Network Topology for IPv4 </h4>
+<p>This example is based on Microsoft Windows Server 2012 R2. Internet Information Services (IIS) are used to configure HTTPS server. The server and NT32 simulator use the same IPv4 subnet (192.168.10.0) as shown in Figure 2.
+<img src="../media/image2.jpg" alt=""></p>
+<h6 id="figure-2-https-boot-ipv4-configuration">Figure 2 HTTPS Boot, IPv4 Configuration</h6>
+<h4 id="configure-dhcpv4-server">Configure DHCPv4 Server </h4>
+<p>The steps to configure a DHCPv4 server are as follows:</p>
+<ol>
+<li>Add a DHCP service in Windows Server. Please refer to the installation steps available here: <a href="http://thetechnosolution.com/installing-and-configuring-dhcp-on-windows-server-2012-r2/" target="_blank">http://thetechnosolution.com/installing-and-configuring-dhcp-on-windows-server-2012-r2/</a>.</li>
+<li>Right click on &#x2018;IPv4 &#x2013; New Scope&#x2019; to create a new scope option for IPv4 including the scope name, address range, and IP address lease duration. See Figure 3 for details.
+<img src="../media/image3.jpeg" alt=""><h6 id="figure-3---dhcpv4-server-scope">Figure 3 DHCPv4 Server Scope</h6>
+</li>
+<li>Right click &#x2018;Server Options &#x2013; Configure Options&#x2026;&#x2019; to configure IPv4 options including option 6, 60 and 67. These options must be configured for proper functionality. After configuration, the options should appear as shown in Figure 4. If the corresponding option code doesn&#x2019;t appear in &#x2018;Server Options &#x2013; Configure Options&#x2026;&#x2019; then right click &#x2018;IPv4 &#x2013; Set Predefined Options&#x2019;, and click the &#x2018;Add&#x2019; button to add the predefined option.<br>
+a.  Option 6 indicates the DNS server address.<br>
+b.  Option 60 defines the vendor Class ID. The value should be set to &#x2018;HTTPClient&#x2019;.<br>
+c.  Option 67 contains the corresponding boot file URI.<br>
+<img src="../media/image4.jpeg" alt=""><h6 id="figure-4---dhcpv4-server-options">Figure 4 DHCPv4 Server Options</h6>
+</li>
+<li>Right click the DHCP server name and select the &#x2018;All Tasks &#x2013; Restart&#x2019; option to restart the DHCPv4 service.</li>
+</ol>
+<h4 id="configure-dnsv4-server">Configure DNSv4 Server </h4>
+<p>The steps to configure the DNSv4 server are as follows:</p>
+<ol>
+<li>Add the DNS service in Windows Server Manager &#x2013; &#x2018;Add roles and features&#x2019;.</li>
+<li>Add a new forward lookup zone named &#x2018;cloudboot.com&#x2019;.</li>
+<li>Add a new Host &#x201C;www&#x201D; for IPv4 (192.168.10.8). See Figure 5 for reference.
+<img src="../media/image5.jpeg" alt=""><h6 id="figure-5---configure-new-host-for-ipv4">Figure 5 Configure New Host for IPv4</h6>
+</li>
+<li>Right click the DHCP server name and select the &#x2018;All Tasks &#x2013; Restart&#x2019; option to restart the DHCPv4 service.</li>
+</ol>
+<h4 id="configure-https-server-for-ipv4">Configure HTTPS Server for IPv4 </h4>
+<p>The steps to configure the HTTPS server are as follows:</p>
+<ol>
+<li>Enable the Internet Information Services (IIS) feature in Windows Server manager, based on installation steps available here: <a href="http://www.iis.net/learn/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2" target="_blank">http://www.iis.net/learn/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2</a>.</li>
+<li>Open the Internet Information Services (IIS) Manager, and add a new MIME type for the resources required by the HTTPS server. For the approved media type by IANA (e.g. <em>.efi/</em>.img/*.iso), please refer to the <a href="http://www.iana.org/assignments/media-types" target="_blank">http://www.iana.org/assignments/media-types</a>. In this example, the client will boot to a UEFI Shell image provided by the server. This requires addition of the <code>.efi</code> file type. Figure 6 and Figure 7 show the detailed steps.
+<img src="../media/image6.jpeg" alt=""><h6 id="figure-6---add-mime-type">Figure 6 Add MIME Type</h6>
+<img src="../media/image7.jpeg" alt=""><h6 id="figure-7---add-a-new-mime-type-to-iis">Figure 7 Add a New MIME Type to IIS</h6>
+</li>
+<li>Enroll the Server key pair (<code>server.pfx</code>) in &#x2018;Server Certificates&#x2019;. Refer to Figure 8 and Figure 9 for details. Here, we assume the <code>server.pfx</code> has been generated. For detailed steps, please refer to section <a href="../https_authentication/self-generated_certificate.html">Self-Generated Certificate</a>
+<img src="../media/image8.jpeg" alt=""><h6 id="figure-8---add-server-certificates">Figure 8 Add Server Certificates</h6>
+<img src="../media/image9.jpeg" alt=""><h6 id="figure-9---enroll-a-certificate-for-the-https-server">Figure 9 Enroll a Certificate for the HTTPS Server</h6>
+</li>
+<li>Create a <code>&#x2018;httpsroot</code>&#x2019; folder in &#x2018;<code>C:\inetpub</code>&#x2019; as a default root path (<code>C:\inetpub\httpsroot</code>).</li>
+<li>Right-click on &#x2018;Sites &#x2013; Add Website&#x2019; to create a new website for the HTTPS server. The areas highlighted in Figure 10 are required fields. The &#x2018;Physical path&#x2019; is the default root path for the website. The &#x2018;SSL certificate&#x2019; is the server key&#x2019;s (<code>server.pfx</code>) common name (<code>192.168.10.8</code>), which was enrolled in Step 3. The binding type is &#x2018;https&#x2019; and the binding port value is &#x2018;<code>443</code>&#x2019;.
+<img src="../media/image10.jpeg" alt=""><h6 id="figure-10---create-a-new-website-for-the-https-server">Figure 10 Create a New Website for the HTTPS Server</h6>
+</li>
+<li>Create an &#x2018;EFI&#x2019; folder in default root path, which was configured in Step 5. Copy the UEFI Shell binary that matches your firmware configuration into this folder (<code>C:\inetpub\httpsroot\EFI</code>). The UEFI Shell binary is in the <code>ShellBinPkg</code> package on EDK II (<a href="https://github.com/tianocore/edk2/tree/master/ShellBinPkg" target="_blank">https://github.com/tianocore/edk2/tree/master/ShellBinPkg</a>).The file should be renamed <code>Shell.efi</code> to match the configuration in DHCP option 67. This sets the UEFI Shell boot path as <a href="https://www.cloudboot.com:443/EFI/Shell.efi" target="_blank">https://www.cloudboot.com:443/EFI/Shell.efi</a>
+<img src="../media/image11.jpeg" alt=""> <h6 id="figure-11---the-uefi-shell-file-as-viewed-in-iis">Figure 11 The UEFI Shell file, as viewed in IIS</h6>
+<strong>Note:</strong> <em>The NT32 Simulator uses the IA32 UEFI Shell binary, while most production systems require the x64 UEFI Shell to match the UEFI firmware configuration. This depends on your platform firmware configuration.
+</em></li>
+</ol>
+<h4 id="enable-nt32-simulator-for-ipv4">Enable NT32 Simulator for IPv4 </h4>
+<p>To enable the UEFI HTTPSv4 Boot feature, the EDKII network stack (IPv4) must be built in your system firmware, which is located at <a href="https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Universal/Network" target="_blank">MdeModulePkg/Universal/Network</a>. Here, the verified version is: <a href="https://github.com/tianocore/edk2/commit/d52f9163debb523e06d49ed8a4627a0317bab92c" target="_blank"><strong>d52f9163debb523e06d49ed8a4627a0317bab92c</strong></a>.</p>
+<p><strong>Modules in DSC file</strong></p>
+<p>The following libraries and drivers are required by HTTPSv4 boot:</p>
+<p>Add the following libraries to the <code>LibraryClasses</code> section:</p>
+<pre><code class="lang-ini">DpcLib|MdeModulePkg/Library/DxeDpcLib/DxeDpcLib.inf
+NetLib|MdeModulePkg/Library/DxeNetLib/DxeNetLib.inf
+IpIoLib|MdeModulePkg/Library/DxeIpIoLib/DxeIpIoLib.inf
+UdpIoLib|MdeModulePkg/Library/DxeUdpIoLib/DxeUdpIoLib.inf
+TcpIoLib|MdeModulePkg/Library/DxeTcpIoLib/DxeTcpIoLib.inf
+HttpLib|MdeModulePkg/Library/DxeHttpLib/DxeHttpLib.inf
+OpensslLib|CryptoPkg/Library/OpensslLib/OpensslLib.inf
+BaseCryptLib|CryptoPkg/Library/BaseCryptLib/BaseCryptLib.inf
+TlsLib|CryptoPkg/Library/TlsLib/TlsLib.inf
+</code></pre>
+<p>Add the following drivers to the <code>Components</code> section:</p>
+<pre><code class="lang-ini">MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
+MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf
+MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
+MdeModulePkg/Universal/Network/ArpDxe/ArpDxe.inf
+MdeModulePkg/Universal/Network/Ip4Dxe/Ip4Dxe.inf
+MdeModulePkg/Universal/Network/Tcp4Dxe/Tcp4Dxe.inf
+MdeModulePkg/Universal/Network/Udp4Dxe/Udp4Dxe.inf
+MdeModulePkg/Universal/Network/Dhcp4Dxe/Dhcp4Dxe.inf
+NetworkPkg/HttpDxe/HttpDxe.inf
+NetworkPkg/HttpBootDxe/HttpBootDxe.inf
+NetworkPkg/HttpUtilitiesDxe/HttpUtilitiesDxe.inf
+NetworkPkg/DnsDxe/DnsDxe.inf
+NetworkPkg/TlsDxe/TlsDxe.inf
+NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf
+</code></pre>
+<p><strong>Note:</strong> <em>The network controller&#x2019;s UNDI driver also needs to be in the list of platform files.</em></p>
+<p><strong>Modules in FDF file</strong></p>
+<p>The following drivers should be added to the <code>FV</code> section for HTTPSv4 boot:</p>
+<pre><code class="lang-ini">INF MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
+INF MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf
+INF MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
+INF MdeModulePkg/Universal/Network/ArpDxe/ArpDxe.inf
+INF MdeModulePkg/Universal/Network/Ip4Dxe/Ip4Dxe.inf
+INF MdeModulePkg/Universal/Network/Tcp4Dxe/Tcp4Dxe.inf
+INF MdeModulePkg/Universal/Network/Udp4Dxe/Udp4Dxe.inf
+INF MdeModulePkg/Universal/Network/Dhcp4Dxe/Dhcp4Dxe.inf
+INF NetworkPkg/HttpDxe/HttpDxe.inf
+INF NetworkPkg/HttpBootDxe/HttpBootDxe.inf
+INF NetworkPkg/HttpUtilitiesDxe/HttpUtilitiesDxe.inf
+INF NetworkPkg/DnsDxe/DnsDxe.inf
+INF NetworkPkg/TlsDxe/TlsDxe.inf
+INF NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf
+</code></pre>
+<p><strong>Build the NT32 Simulator</strong></p>
+<p>The following command is used to build NT32 using Microsoft Visual Studio 2013:</p>
+<pre><code>build -a IA32 &#x2013;t VS2013x86 -p Nt32pkg\Nt32Pkg.dsc
+</code></pre><h2 id="solution-for-ipv6">Solution for IPv6 </h2>
+<p>For IPv6, the DHCP, DNS and HTTPS server are deployed on different systems. This solution provides a more flexible configuration for the DHCP server, DNS server and HTTPS Server.</p>
+<h4 id="network-topology-for-ipv6">Network Topology for IPv6 </h4>
+<p>In this example, the DHCP server is deployed on Ubuntu 15.10. The DNS server is deployed on Windows Server 2012 R2, and the HTTPS Server is deployed on another instance of Windows Server 2012 R2. IIS is used to configure HTTPS server. The servers and NT32 simulator are located on the same IPv6 subnet <code>(2000:bbbb::/64)</code> as shown in Figure 12.
+<img src="../media/image12.jpg" alt=""></p>
+<h6 id="figure-12---https-boot-ipv6-configuration">Figure 12 HTTPS boot, IPv6 Configuration</h6>
+<h4 id="configure-the-dhcpv6-server">Configure the DHCPv6 Server </h4>
+<p>The steps to configure DHCPv6 on an Ubuntu 15.10 server are shown as follows:</p>
+<ol>
+<li>Install the DHCP server: <code>sudo apt-get install isc-dhcp-server</code></li>
+<li>Edit <code>/etc/dhcp/dhcpd6.conf</code> as shown below <br>
+<strong>Note: </strong>If there is no dhcpd6.conf file in <em><code>/etc/dhcp/</code></em>, create it first.<pre><code class="lang-ini">default-lease-time 600;` 
+max-lease-time 7200;
+log-facility local7;
+#option definitions common to all supported networks&#x2026;
+option dhcp6.vendor-class code 16 = { integer 32, integer 16, tring};
+option dhcp6.bootfile-url code 59 = string;
+subnet6 2000:bbbb::/64 {
+#Range for clients
+  range6 2000:bbbb::100 2000:bbbb::ffff;
+  option dhcp6.domain-search &#x201C;cloudboot.com&#x201D;;
+  option dhcp6.name-servers 2000:bbbb::10;
+  option dhcp6.vendor-class 0 0 &#x201C;HTTPClient&#x201D;;
+  &#x201C;https://www.cloudboot.com:443/EFI/Shell.efi&#x201D;;
+}
+</code></pre>
+</li>
+<li>Configure the server to listen for DHCP requests on the correct network interface. This example assumes eth0 is the primary interface. Edit the <code>/etc/default/isc-dhcp-server</code> file to configure <code>INTERFACE = &#x201C;eth0&#x201D;;</code></li>
+<li>Restart the DHCPv6 service:<code>sudo service isc-dhcp-server6 restart</code></li>
+</ol>
+<h4 id="configure-dnsv6-server">Configure DNSv6 Server </h4>
+<p>The steps to configure DNSv6 for Microsoft Windows Server 2002 R2 are as follows:</p>
+<ol>
+<li>Add the DNS service in Windows Server Manager &#x2013; &#x2018;Add roles and features&#x2019;.</li>
+<li>Add a new forward lookup zone &#x2018;<code>cloudboot.com</code>&#x2019; (see Figure 13).
+<img src="../media/image13.jpeg" alt=""><h6 id="figure-13---configure-forward-lookup-zone-for-ipv6">Figure 13 Configure Forward Lookup Zone for IPv6</h6>
+</li>
+<li>Add a new Host &#x201C;www&#x201D; for IPv6 (<code>2000:bbbb::8</code>) as shown in Figure 14.
+<img src="../media/image14.jpeg" alt=""><h6 id="figure-14---configure-new-host-for-ipv6">Figure 14 Configure New Host for IPv6</h6>
+</li>
+<li>Right click the DNS server name and select the &#x2018;All Tasks &#x2013; Restart&#x2019; option to restart the DNSv6 service.</li>
+</ol>
+<h4 id="configure-https-server-for-ipv6">Configure HTTPS Server for IPv6 </h4>
+<p>Please refer to <a href="#configure-https-server-for-ipv4">Section Configure HTTPS Server for IPv4</a> above, as this step is not dependent on IPv4 or IPv6.</p>
+<h4 id="enable-nt32-simulator-for-ipv6">Enable NT32 Simulator for IPv6 </h4>
+<p>To enable the UEFI Boot feature for HTTPSv6, the EDKII network stack (IPv6) must be built in your system firmware, which is located at <a href="https://github.com/tianocore/edk2/tree/master/NetworkPkg" target="_blank">NetworkPkg</a>. Here, the verified version is: <a href="https://github.com/tianocore/edk2/commit/7cf59c854f35c9680965fe83e9cfd863079ddd73" target="_blank">7cf59c854f35c9680965fe83e9cfd863079ddd73</a>.</p>
+<p><strong>Modules in DSC file</strong></p>
+<p>The following libraries and drivers are required by HTTPSv6 boot:</p>
+<p>Add the following libraries to the <code>LibraryClasses</code> section:</p>
+<pre><code class="lang-ini">DpcLib|MdeModulePkg/Library/DxeDpcLib/DxeDpcLib.inf
+NetLib|MdeModulePkg/Library/DxeNetLib/DxeNetLib.inf
+IpIoLib|MdeModulePkg/Library/DxeIpIoLib/DxeIpIoLib.inf
+UdpIoLib|MdeModulePkg/Library/DxeUdpIoLib/DxeUdpIoLib.inf
+TcpIoLib|MdeModulePkg/Library/DxeTcpIoLib/DxeTcpIoLib.inf
+HttpLib|MdeModulePkg/Library/DxeHttpLib/DxeHttpLib.inf
+OpensslLib|CryptoPkg/Library/OpensslLib/OpensslLib.inf
+BaseCryptLib|CryptoPkg/Library/BaseCryptLib/BaseCryptLib.inf
+TlsLib|CryptoPkg/Library/TlsLib/TlsLib.inf
+</code></pre>
+<p>Add the following drivers to the <code>Component</code>s section:</p>
+<pre><code class="lang-ini">MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
+MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf
+MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
+NetworkPkg/Ip6Dxe/Ip6Dxe.inf
+NetworkPkg/TcpDxe/TcpDxe.inf
+NetworkPkg/Udp6Dxe/Udp6Dxe.inf
+NetworkPkg/Dhcp6Dxe/Dhcp6Dxe.inf
+NetworkPkg/HttpDxe/HttpDxe.inf
+NetworkPkg/HttpBootDxe/HttpBootDxe.inf
+NetworkPkg/HttpUtilitiesDxe/HttpUtilitiesDxe.inf
+NetworkPkg/DnsDxe/DnsDxe.inf
+NetworkPkg/TlsDxe/TlsDxe.inf
+NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf
+</code></pre>
+<p><strong>Note:</strong> <em>The network controller&#x2019;s UNDI driver also needs to be in the list of platform files</em></p>
+<p><strong>Modules in FDF file</strong></p>
+<p>The following drivers are required in the <code>FV</code> section for HTTPSv6 boot:</p>
+<pre><code class="lang-ini">INF MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
+INF MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf
+INF MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
+INF NetworkPkg/Ip6Dxe/Ip6Dxe.inf
+INF NetworkPkg/TcpDxe/TcpDxe.inf
+INF NetworkPkg/Udp6Dxe/Udp6Dxe.inf
+INF NetworkPkg/Dhcp6Dxe/Dhcp6Dxe.inf
+INF NetworkPkg/HttpDxe/HttpDxe.inf
+INF NetworkPkg/HttpBootDxe/HttpBootDxe.inf
+INF NetworkPkg/HttpUtilitiesDxe/HttpUtilitiesDxe.inf
+INF NetworkPkg/DnsDxe/DnsDxe.inf
+INF NetworkPkg/TlsDxe/TlsDxe.inf
+INF NetworkPkg/TlsAuthConfigDxe/TlsAuthConfigDxe.inf
+</code></pre>
+<p><strong>Build the NT32 Simulator</strong></p>
+<p>The following command is used to build NT32 using Microsoft Visual Studio* 2013:</p>
+<pre><code>build -a IA32 &#x2013;t VS2013x86 -p Nt32pkg\Nt32Pkg.dsc
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Getting Started with UEFI HTTPS Boot on EDK II</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 07:08:27]</div>
+        <div style="text-align:right">Revision 1.30</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Start Guide">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="configure_server_and_build_client.html#solution-for-ipv4" class="navigation navigation-next " aria-label="Next page: Solution for IPv4">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configure Server and Build Client","level":"1.4.1","depth":2,"next":{"title":"Solution for IPv4","level":"1.4.1.1","depth":3,"anchor":"#solution-for-ipv4","path":"start_guide/configure_server_and_build_client.md","ref":"start_guide/configure_server_and_build_client.md#solution-for-ipv4","articles":[]},"previous":{"title":"Start Guide","level":"1.4","depth":1,"path":"start_guide/README.md","ref":"start_guide/README.md","articles":[{"title":"Configure Server and Build Client","level":"1.4.1","depth":2,"path":"start_guide/configure_server_and_build_client.md","ref":"start_guide/configure_server_and_build_client.md","articles":[{"title":"Solution for IPv4","level":"1.4.1.1","depth":3,"anchor":"#solution-for-ipv4","path":"start_guide/configure_server_and_build_client.md","ref":"start_guide/configure_server_and_build_client.md#solution-for-ipv4","articles":[]},{"title":"Solution for IPv6","level":"1.4.1.2","depth":3,"anchor":"#solution-for-ipv6","path":"start_guide/configure_server_and_build_client.md","ref":"start_guide/configure_server_and_build_client.md#solution-for-ipv6","articles":[]}]},{"title":"Run HTTPS Boot","level":"1.4.2","depth":2,"path":"start_guide/run_https_boot.md","ref":"start_guide/run_https_boot.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"Getting Started with UEFI HTTPS Boot on EDK II","version":"Revision 1.30"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"start_guide/configure_server_and_build_client.md","mtime":"2020-12-01T07:07:53.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T07:08:27.318Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
